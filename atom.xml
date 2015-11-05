@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://yokowinds.github.io/atom.xml" rel="self"/>
   <link href="http://yokowinds.github.io/"/>
-  <updated>2015-11-05T17:18:39+08:00</updated>
+  <updated>2015-11-05T17:43:18+08:00</updated>
   <id>http://yokowinds.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,20 +14,52 @@
 
   
   <entry>
-    <title type="html"><![CDATA[A Post Demo]]></title>
+    <title type="html"><![CDATA[a post demo]]></title>
     <link href="http://yokowinds.github.io/blog/2015/11/05/a-post-demo/"/>
     <updated>2015-11-05T17:18:26+08:00</updated>
     <id>http://yokowinds.github.io/blog/2015/11/05/a-post-demo</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>jkdso
+lsdka</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
+    <title type="html"><![CDATA[hello world]]></title>
     <link href="http://yokowinds.github.io/blog/2015/11/03/hello-world/"/>
     <updated>2015-11-03T22:51:57+08:00</updated>
     <id>http://yokowinds.github.io/blog/2015/11/03/hello-world</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h2>Me and Mrs.Jones</h2>
+
+<p>Me and Mrs. Jones,
+we got a thing going on,
+We both know that it&rsquo;s wrong
+But it&rsquo;s much too strong to let it cool down now.
+We meet ev'ry day at the same cafe,
+Six-thirty I know she&rsquo;ll be there,
+Holding hands, making all kinds of plans
+While the jukebox plays our favorite song.
+Me and Mrs., Mrs. Jones, Mrs. Jones, Mrs. Jones,
+Mrs. Jones got a thing going on,
+We both know that it&rsquo;s wrong,
+But it&rsquo;s much too strong to let it cool down now.
+We gotta be extra careful that we don&rsquo;t build our hopes too high
+Cause she&rsquo;s got her own obligations and so do I,
+Me, me and Mrs., Mrs. Jones, Mrs. Jones, Mrs. Jones,
+Mrs. Jones got a thing going on,
+We both know that it&rsquo;s wrong,
+But it&rsquo;s much too strong to let it cool down now.
+Well, it&rsquo;s time for us to be leaving,
+Iit hurts so much, it hurts so much inside,
+Now she&rsquo;ll go her way and I&rsquo;ll go mine,
+But tomorrow we&rsquo;ll meet the same place, the same time.
+Me and Mrs. Jones, Mrs. Jones, Mrs. Jones.
+we got a thing going on
+We gotta be extra careful that we can&rsquo;t build our hopes too high
+I want meet and talk with you at the same place,
+at the same caffe,at the same time
+and we gonna hold hands like we used to
+we gonna talk it over,talk it over
+we know,they know and you know and I know it&rsquo;s wrong</p>
 ]]></content>
   </entry>
   
