@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://yokowinds.github.io/atom.xml" rel="self"/>
   <link href="http://yokowinds.github.io/"/>
-  <updated>2015-11-05T09:22:11+08:00</updated>
+  <updated>2015-11-05T17:18:39+08:00</updated>
   <id>http://yokowinds.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Post Demo]]></title>
+    <link href="http://yokowinds.github.io/blog/2015/11/05/a-post-demo/"/>
+    <updated>2015-11-05T17:18:26+08:00</updated>
+    <id>http://yokowinds.github.io/blog/2015/11/05/a-post-demo</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
