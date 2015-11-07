@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yokowinds.github.io/blog/2015/11/05/a-post-demo/</loc>
-    <lastmod>2015-11-05T17:18:26+08:00</lastmod>
+    <loc>http://yokowinds.github.io/blog/2015/11/07/about-time/</loc>
+    <lastmod>2015-11-07T16:19:45+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yokowinds.github.io/blog/2015/11/05/curve-wrecker/</loc>
+    <lastmod>2015-11-05T20:37:27+08:00</lastmod>
   </url>
   <url>
     <loc>http://yokowinds.github.io/blog/2015/11/03/hello-world/</loc>
     <lastmod>2015-11-03T22:51:57+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yokowinds.github.io/blog/2012/05/07/life-and-change/</loc>
+    <lastmod>2012-05-07T16:54:09+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://yokowinds.github.io/blog/2012/05/07/brave-in-love/</loc>
+    <lastmod>2012-05-07T16:45:15+08:00</lastmod>
   </url>
   <url>
     <loc>http://yokowinds.github.io/blog/archives/</loc>
@@ -18,6 +30,15 @@
     <loc>http://yokowinds.github.io/super-awesome/</loc>
   </url>
   <url>
+    <loc>http://yokowinds.github.io/blog/categories/</loc>
+  </url>
+  <url>
     <loc>http://yokowinds.github.io/about/</loc>
+  </url>
+  <url>
+    <loc>http://yokowinds.github.io/blog/categories/guan-gan/</loc>
+  </url>
+  <url>
+    <loc>http://yokowinds.github.io/blog/categories/liu-guang/</loc>
   </url>
 </urlset>
