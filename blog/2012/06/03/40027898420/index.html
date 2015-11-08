@@ -1,0 +1,173 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>“我的衣柜”程序修订日志 - yokowinds' blog</title>
+	<meta name="author" content="yokowinds">
+
+	
+	<meta name="description" content="相信每个爱美的女人都希望自己有个无穷大的衣柜。我的衣柜已经快超负荷了，但仍然制止不了我买衣服的冲动。主要原因是根本不知道我衣服到底有多少，所以总是感觉缺一件。4月份换季的时候，我从柜顶上翻出所有夏天的衣服，发现很多竟然是买了就忘记穿。于是我突发奇想，我要建立个人衣服管理平台， &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="yokowinds' blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">yokowinds' blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:yokowinds.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:yokowinds.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">“我的衣柜”程序修订日志</h2>
+	<div class="entry-content"><p>相信每个爱美的女人都希望自己有个无穷大的衣柜。我的衣柜已经快超负荷了，但仍然制止不了我买衣服的冲动。主要原因是根本不知道我衣服到底有多少，所以总是感觉缺一件。4月份换季的时候，我从柜顶上翻出所有夏天的衣服，发现很多竟然是买了就忘记穿。于是我突发奇想，我要建立个人衣服管理平台，不仅录入我所有的衣服信息，还需要给每件衣服打上tag，帮助日常搭配。酝酿了一周，我就动手做了。</p>
+
+
+<p>最近正好换了mac air，于是编码环境就从ubuntu迁移到mac os 。 选用的是 python＋django＋mysql 。 搭建环境过程中各种诡异问题，折腾两个星期后，我的closet就开始正式“系分”了。</p>
+
+
+<p>在django中写好模型对象，框架就会自动帮你建立好数据库存储。</p>
+
+
+<p>clothes对象有如下属性： 颜色 &nbsp;穿衣季节 &nbsp;材质 &nbsp;类别 &nbsp;新旧 &nbsp;标签 &nbsp;照片 &nbsp;最后修改时间 </p>
+
+
+<p><img id="248C35E3A10D8C2C4FE0FA56A0470678"></p>
+
+
+<p>这周只是把数据库和后台管理整起来了，基本增／删／改／查已满足。前台页面目前只是照片的堆砌，后面几周继续完善。feature to go：</p>
+
+
+<p>1. 瀑布式浏览。 开打默认式当下这个季节的所有衣服图片展示。经常看看，防止有些衣服丢衣柜里忘记穿。</p>
+
+
+<p>2. 按照季节／tag／颜色等分类浏览</p>
+
+
+<p>3. 自动搭配功能。按照一定的规则，比如浅色上衣＋深色下衣等，系统随机搭配出今天要穿的衣服。</p>
+
+
+<p>4. 根据对衣服的喜欢程度，可以设置衣服在随机搭配中出现的频率。初步想法是给不同衣服不同的权重值。</p>
+
+
+<p>5. 手机拍照自动上传图片到服务器功能｛这个纯属yy，有时间就完善下｝</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>－－－－未完</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待续－－－－</p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+Jun 3rd, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/liu-guang/'>流光</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    yokowinds
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>裸奔的产品 - yokowinds' blog</title>
+	<meta name="author" content="yokowinds">
+
+	
+	<meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;最近在关注团队中每个人的工作负荷。 发现程序员们很大一部分时间花在故障排查和业务咨询上。有些咨询是直接到我这里的，看了之后感觉非常无语。比如，一个新来的PD说要整理错误码，前后一个月，终于产出了一封谁也看不懂的邮件和三个excel表格， &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="yokowinds' blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">yokowinds' blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:yokowinds.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:yokowinds.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">裸奔的产品</h2>
+	<div class="entry-content"><p> &nbsp;&nbsp;&nbsp;&nbsp;最近在关注团队中每个人的工作负荷。 发现程序员们很大一部分时间花在故障排查和业务咨询上。有些咨询是直接到我这里的，看了之后感觉非常无语。比如，一个新来的PD说要整理错误码，前后一个月，终于产出了一封谁也看不懂的邮件和三个excel表格，期间PD骚扰了无数的开发，给捞线上数据，给捞日志分析，无比辛苦。但结果并不好。还有一个列子，就是PD要提升用户的支付成功率，但需要程序员一家一家银行去捞取错误日志，并手工汇总成特定格式，浪费了团队1.5人日。主要是开发的感受不好，为什么这种shit事情总是找到技术团队。<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;抽取了几个示例，就会发现我们的产品正在裸奔。<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;没有监控台，从而没办法定向修复问题；没有风控事件，从而导致了大量的资损和投诉；没有定期梳理，从而无法定向营销和推广。说白了，我们现在是被市场推着在做产品，而不是有预见性的、有强烈目的性的去设计。<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从去年接手到现在，有几点可以总结的：<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. 产品的生命周期要考虑全面。 一个产品，不是能给用户使用就可以了，还要考虑到整个产品周期，生产阶段、运营阶段、维护阶段和持续发展的roadmap计划。 至少现在看来，极度缺失的是运营支持和维护支持。一个错误码，连个后台查询管理功能都没有。开发苦逼地每天查看代码去匹配，维护成本太大。<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. 面临持续发展的产品，如果没想清楚，就跟老产品完全隔离开来。我记得在《失控》的读书笔记里看到一个理论，即先分解成一个简单的、小的模块，精准地完成，接着重复的精准完成。 然后在上面加一个稍微复杂的模块，再持续精准的完成。任何事情都可以按照此种模式完成。回想产品开发的过程，当时先做了信用卡，在做借记卡的时候，就想着统一和融合，虽然是大趋势，但当下这种第一层都没稳定的基础上，不适合往上加东西。导致现在业务规则各自维护一套，查个日志要东拼西凑。还不如当时新建个系统，把两个东西完全隔离开来。<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. 还是老问题，千万不要挖个坑自己跳。在制定产品规则的时候、做决策的时候尤其要注意。比如关联账户的规则，做了三、四次改版，每个需求提上来都要对关联账户做特殊考虑， 纠结了一年之后，终于把这个规则下掉了。 类似的事情还有后台权限，当时很多人争着抢着要线上配置权限，后来发现handle不了的时候，又开始往外推，现在基本上没人打理。还有，为了所谓的“给用户无缝的用户体验”，产品频道首页要保持跟收银台一致，结果以后每次收银台修改，临上线了才发现产品频道要同步修改，赶紧提特殊需求改掉。这不是自己给自己找麻烦么。 做决策是个很快的过程，关键是在做出决策之前一定要在脑中过掉完整的流程，一年、三年后回头看看，是不是自己挖了很多坑呢...<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. 开发人员太缺少做产品的心态了。无论编码多厉害，无论排错多快，最终还是看你做出来的东西是不是好用。我一直觉得程序员是个很分裂的角色，一方面，追求所谓“完美”的解决方案，在架构上面磨磨唧唧，思前想后；另一方面，在写代码时又对需求极尽简化地实现，能硬编码尽量硬编码，能不新增枚举就凑合着用。 （当然，这也看不同的开发风格，我也看到很好的geek，用最灵活的方式去实现需求，不过很少）。 身边的一个例子：后台添加错误码的权限，硬编码分配给了完全不相干的部门，原因就是当时是从另外一个页面拷贝过来的，类似的功能，就没修改。还有一个，系统在遇到不认识的错误码，会自动插入到数据库。本来是个很到的想法，但插入之后的工作完全没考虑，比如你是不是要通知下PD，“嘿，我这里新增了个错误码，你要在后台新增对应文案，否则用户还是看不到正确的显示”？ 。<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最近有强烈的危机感，公司规模越来越大，之前可以独当一面的情况再也不存在。我们都成了螺丝钉，缺了一点点英雄主义的刺激，也似乎少了些激情。 开发、测试人员逐渐成了机械手脚，推一下动一下，没有了owner的精神。像后来到公司的这些个同事，因为没有经历过单打独斗的时期，所以可能认为是正常的，做老板交代的事情就可以了。但对于我这样的老人，是无比失落的。除了人员的主观能动性问题，规模变大还带来了：办公室政治 &nbsp;不和谐的同事关系 &nbsp;斤斤计较 &nbsp;更为严苛的剥削 推动落实事情的万千困难....<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;希望所以开发人员都不要在稳定的环境中迷失了自己。其实java啊，mysql啊都是浮云，在若干年后，可能跟小学生的加减乘除一样普及，甚至用机器人来完成编码，没什么好深入研究的（当然，自己感兴趣除外），关键是享受技术带来的乐趣。最终的竞争力来源于你这个人，你的性格、你的做事方式、你的态度， 而不是你会什么技术。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p><br><br><br><br></p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 24th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-li/'>管理</a>
+
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    yokowinds
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

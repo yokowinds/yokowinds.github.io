@@ -1,0 +1,845 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>yokowinds' blog</title>
+	<meta name="author" content="yokowinds">
+
+	
+	<meta name="description" content="这个项目是我从其他PM手里接过来的，对于前期的信息沟通不是很清晰。到我手里的时候，资源、范围都确定了，我就掉以轻心地按照升级包形式来做。 虽然发布之前制定了详细的计划、做了两轮的代码review，发布期间仍然出现了问题：充退查询原充值数据使用大字段兼容方案和分期支付渠道切换到渠道路由兼容方案 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="yokowinds' blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">yokowinds' blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:yokowinds.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:yokowinds.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/29/40027873856/">
+		
+			项目总结-移花接木三期</a>
+	</h2>
+	<div class="entry-content">
+		<p>这个项目是我从其他PM手里接过来的，对于前期的信息沟通不是很清晰。到我手里的时候，资源、范围都确定了，我就掉以轻心地按照升级包形式来做。</p>
+
+
+<p>虽然发布之前制定了详细的计划、做了两轮的代码review，发布期间仍然出现了问题：充退查询原充值数据使用大字段兼容方案和分期支付渠道切换到渠道路由兼容方案 。</p>
+
+
+<p> 从项目角度反思了下，有几点是没有做好的： </p>
+
+
+<p> 1. &nbsp;&nbsp;&nbsp;项目周期太长。从2月底做到5月初。其实工作量没有那么大，而是由于期间被插入过两个高优先级的业务型的升级包，开发和测试两个人都没有fulltime的投入项目，导致发布期间问题较多。以后制定项目计划时一定要避免这种拖沓的情况，让团队成员的注意力保持在一个项目中。</p>
+
+
+<p> 2. &nbsp;&nbsp;&nbsp;没有遵循变更的处理流程，改动比较随意。 项目期间发现的变更有： a. 在功能测试阶段加入分期的逻辑规则 &nbsp;&nbsp;b. 在代码合并前一周加入无卡支付的搭车逻辑 &nbsp;&nbsp;&nbsp;。 这两个功能都只是系分、测分两个人沟通通过，其他人都是事后被告之，没有经过团队的充分评估。果然这两个后来加上的点在预发布、发布阶段都出现了问题。 &nbsp;以后面对既已发生的变更，在得知之后，还是要遵循变更流程，各方彻底评估后方能接受。</p>
+
+
+<p> 3. &nbsp;&nbsp;&nbsp;对项目复杂度评估不够，各方资源没准备到位。从系分上看，这只是一个接口的迁移。没想到发展到后来，分期上线、浦发信用卡上线、收银台发布的不兼容等等问题出现，回头看看，资源上是有问题的：系分没有大型项目的经验、测分本身身兼产品Owner的角色，日常事情非常多、收银台的开发是个新人，对系统了解不够…. 当然这是马后炮，以后千万不能小看任何一个项目，每个项目都有独立性，都有不一样的风险，要保持警觉，谨慎对待。</p>
+
+
+<p> 4. &nbsp;老问题，没管理好干系人。比如系分评审会议，没有喊上架构师和测试主管、 发布计划评审没有喊上SQA，让各种流程沦为形式，没有发挥好每个人的作用。还有一个，项目上线时间变更没有通知到北面（虽然不是需求方，但比较关心这个需求），导致与无线的配合比较仓促。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>测分的个人总结：</p>
+
+
+<p>新老数据兼容性测试，这是今后必须要考虑到也是要做到的点，相同问题决不能再次出现；</p>
+
+
+<p><span><span>需要其他同学配合测试时，需要说明改动点以及测试点和范围，有必要的情况下还可以让配合同学也评估一下是否还有遗漏的点，毕竟人多力量大，想到的也更全面；</span></span></p>
+
+
+<p>项目进行中新增的需求必须充分评估，较为保险的方法就是邀请相关业务负责人一起参与评估及分析，人与人之间重在沟通；</p>
+
+
+<p>对于项目中任何代码的修改及删除的掌控度需要提高，只有自己知道了这里的改动，才能更好的评估出测试的范围；</p>
+
+
+<p>对于老数据的特殊性需要追寻，测试过程中，建议增加捞取线上数据的比对环节，这样可以比较好的防止对于某些特殊数据的评估不足的问题。</p>
+
+
+<p>以上几个问题都是测分需要做到的，但也都是比较花费时间和精力的事情，所以我发现公司制定的金字塔结构的组织架构真的很科学，很符合项目的要求。</p>
+
+
+<p>为什么要将测分和测试执行者单独分开来？</p>
+
+
+<p></p>
+
+
+<p> &nbsp;&nbsp;就是为了让测分同学能有更多的时间和精力去完成上面总结中的工作，只用测分做好了，测试执行也就全面了。</p>
+
+
+<p>这个项目中做到了测分和测试执行的拆分马？</p>
+
+
+<p><span><span>没有，整个项目中测分和测试执行同学基本上是同一个，其他外围配合同学虽然找了一大推，有快捷网关的梦洁同学、信用卡分期的李寄同学、无卡支付的记儿同学、无线支付的羽东同学、直连冲退的淳于柔同学，等等，但是大家也仅仅是做了下回归工作，回归同学对于项目中的改动是什么根本不明确，这也就是总结中第二点需要改善的。说实话，本项目中测分很缺少时间来完成总结中的第三、四、五点的内容。我的错误在与向主管沟通，让其再协调一个专门进行测试执行的资源给我，替我分担这部分工作，这也是我今后在做此类大型技改类项目时要注意的地方，我太闷了，自己不是万能的。</span></span></p>
+
+
+<p><br><p></p></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 29th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-li/'>管理</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40026733640/">
+		
+			爱情是种投资</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>最近重温了大学时代的电影清单，看了《小姐好辣》，其中那段曾让我感动其中无法自拔的台词，现在看来，已经找不到当初的feel了：</span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p>“he is the only one who make my heart beats slower and faster at the same time”</p>
+
+
+<p>可能是阅历增长了，再回头看这些小女生的浪漫幻想已经没有任何冲动，只是觉得，噢，爱情也就那么回事吧。相反，我大爱《BJ单身日记》和《欲望都市》，揭露了成人丑陋的爱情观之后，女主角成熟了，学会了独立，让那些臭男人回头的故事。</p>
+
+
+<p>其实在我看来，爱情是种投资，一半运气，一半智慧。押上的是青春和时间，期望的是人生路上有人陪伴。运气好的很容易就找到情投意合的，运气不好的，则是经历痛苦的磨合期后，抛弃或者被抛弃。</p>
+
+
+<p>其实身边是谁无所谓。 爱情，一开始是一种感觉，后来就变成了一种态度。就像《蜗居》里海萍说的“爱上一个人只需要3秒钟，但爱一个人却要穷尽一生”。</p>
+
+
+<p>年轻男女，很容易就“来电”了，但之后呢？ 当发现对方是个软弱的悲观主义者？ 发现对方是个爱慕虚荣的市井小民？ 发现对方是个爱自己甚过爱你的自私鬼？ 抽烟成瘾？ 酗酒？ 暴力倾向？ 婆婆妈妈？ … &nbsp;是抛弃还是忍耐？不是凭感觉，而是完全看自己的态度。</p>
+
+
+<p>很多人维持着苟延残喘的关系，只是在维持着投资回报率 - 你看，搭上了那么多的时间和精力，还有数目可观的金钱，现在才说要放弃，投资回报率是零，不划算！于是，凑合着过呗，过着过着就一辈子了。《非诚勿扰2》里葛大爷不也说：婚姻再怎么选择都是错误，长久的婚姻就是将错就错。至于婚姻是否幸福，是需要两人不断地沟通、关心和适当的妥协。</p>
+
+
+<p>不要逼迫枕边人结婚或者给你承诺，因为那不是他内心的真实想法。当他意识到你是值得投资回报率的那个人，不用你说，他也会巴不得马上跟你过下半辈子的。</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/liu-guang/'>流光</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40026910135/">
+		
+			职业修成之路</a>
+	</h2>
+	<div class="entry-content">
+		<p>&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;上次给公司的校园招聘做了回公关，看到他们的简历，回想起当年自己刚毕业那会儿，简历上什么都写，连学生会委员、手机促销都粗体标出来，现在看来，真是可笑。现在，工作年限多了，心态上成熟了很多，当年在学校里信誓旦旦“我要进IBM”的幼稚想法已经没有，重心是放在经验积累和自我提升的层面。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;与公司的面试官聊天，她提及了几点“潜规则”，我觉得对毕业生还是蛮有用的.</p>
+
+
+<p>&nbsp;</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;1. 长相要大方，不猥琐。 虽然长相是天生的，但是气质却是后天养成的。一个长相猥琐，行为小里小气，穿着邋里邋遢的人，会被挑剔的面试官一棒子拍死。不管你的学历有多高，工作经验多丰富，一看到你的长相就不像跟你合作！</p>
+
+
+<p> &nbsp;&nbsp;2. 要价合理。 相比于跳槽的职场老鸟，公司还是希望招聘刚毕业的大学生。原因有两个：第一，大学生的工资要的很少，而且可塑性高。 第二，大学生的忠诚度高。 如果你是个老鸟，而且希望被公司招聘，唯一的途径就是，把在上一个公司积累的经验奉献给新公司，而且表示，一旦进入该公司，我不会轻易离开。</p>
+
+
+<p> &nbsp;&nbsp;3. 回答面试官的问题时态度要真诚。 毕竟，面试官各个是阅人无数的，你说的真话假话他一听就知道。 比如，一个女孩子长得很胖（350KG），面试官问她，你从小到大，有没有因为体型的原因自卑过。 你要是回答从来没有，面试官可能会认为你没有实话实说，太假。 而如果你说：“小时候是有被人起绰号，长大了明白外表不重要的，就拼命充实内涵，现在已经没什么阴影了”。 这样会觉得你这人特真诚。</p>
+
+
+<p> &nbsp;4. 认同公司的文化，提前融入公司氛围。 公司总是希望招一些气味相投的人，快乐工作，效率最高。 如果是IBM，就要谨慎和稳重。 如果是腾讯，那就要创新活泼。面试的时候，你应该是千面人，硬朗妩媚兼备。</p>
+
+
+<p>另外，上次的季度Review上，公司的HR给我提了个改进点，虽然个人的影响力在慢慢提升，但是职场形象还没有彻底建立。 因为年纪小，又一张娃娃脸，被同事起外号-“小朋友”。本来以为这是我亲和力的表现，却恰恰相反，这样有损我的魄力和执行力，就算我说得多么正确，别人也以为是小朋友的自说自话，不当回事。 说白了，没有威严。 哎， 我明白了为什么另外一个男生被叫小朋友之后一周，就郑重警告我们，禁止这个昵称了。 看来他已经意识到这个问题的严重性了。 就我还那么傻，任由别人在球场上、电梯里、饭桌上叫得欢… &nbsp;我要继续努力，争取Q4逐步消灭这个影响我职场形象的称号。~ </p>
+
+
+<p> &nbsp;&nbsp;职场之路漫漫，吾将上下求索~ ！ </p>
+
+
+<p>&nbsp;</p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-li/'>管理</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40025562741/">
+		
+			爱情路上的勇者- 评《和夏莫的500天》</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>很久没写影评了，年末让人头疼的事情很多，我最近像是浮在半空中很久，don’t know where i am heading for , don’t know what i am looking for. 脾气暴躁了，体重增加了，幽默感少了。上次同事聚餐，一个经验老到的项目经理要给每个人做个总结，轮到我时，他说，虽然你平时嘻嘻哈哈的，但是一小女生独自在上海打拼，内心多少有些孤独。</span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孤独？不觉得，因为每天都有做不完的事情。 deep down my heart，只是觉得在上海的生活乏味了很多，周末再也不出去high了，只是窝在家里看看电影，练练吉他，看看书,有时候能窝在沙发上同一个姿势保持一天，真的成了宅女腐女。 上周看了一部片子，英文名是 500 days of summer,中文被译成 和莎莫的500天。其实这个片子很早就出了，我只是嫌弃很俗的片名，憋着很久没看。 偶然发现豆瓣上的评分还蛮高，就带着好奇去看了。还算值得花两个小时去回味的片子吧。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;影片拍摄手法比较新颖，采用插叙的手法，让观众知道了开头，知道了结尾，然后再娓娓道来中间曲折的过程，而且中间很cute的小漫画，深深打动了我。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;然后是神经兮兮的女主角，挂着一双无辜的大眼睛，让人很想接近。我记得金凯利的YES MAN里面也有她。男主角是典型的爱情失败者，loser+belle，给来希望和票房。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;其实，所谓爱情，只是一瞬间的感觉，当你处在恋爱中，说出多肉麻的话都是正常，因为内心被不安分的、悸动的荷尔蒙占领。一旦不爱了，转身就成了陌生人，快得让人措手不及。像分手后的女主角，马上就订婚了。但生活仍需继续，陷在一段感觉久久不能出来，说好听是长情，说现实点就是懦弱。因为不敢直视未来的生活，无法接受被抛弃所以逃避。你怀念的，不是那个曾让你幸福无比的人，而是幸福的感觉。</p>
+
+
+<p> &nbsp;&nbsp;很多怨女怨妇在分手后常说，竟然被他骗了那么久。其实，恋爱中的山盟海誓都是真的，因为当时确实是想跟身边的这个人共度余生，荷尔蒙让人失去理性。然而计划赶不上变化，你不能保证10年后你还如此迷恋身边的人。所以，当恋人拒绝给你承诺，不要觉得他在逃避责任，或许他是个真诚的人，他知道爱情只是种感觉，来的快可能去得更快，他无法骗你说保证爱你一生一世，那样太虚伪。</p>
+
+
+<p> &nbsp;&nbsp;毕竟，与漫长的一生相比，年轻时的恋爱只是昙花一现，爱过了，抛弃了，继续生活，继续追逐幸福。有时候，幸福只是道选择题，A or B，自己说了算。</p>
+
+
+<p> &nbsp;&nbsp;电影最后，当男主角终于从女主角summer的阴影中走出来，整整500天，他在501天遇到了人生的另一段爱情-一个叫autumn的女人，他希望能在这个秋天收获一生的伴侣，也仅仅是希望而已，未来怎样，谁都无法保障。 go for it ,爱情的勇者，也许真爱就在下一段未知的恋情中....</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-gan/'>观感</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40026769510/">
+		
+			生活！改变！- 《革命之路》影评</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span><br></span></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p>我是冲着铁达尼号的“原配”去看的，结果这对帅哥靓女倒是给我了惊喜。革命之路是部好片子，可能剧情稍微有点波澜不惊，但是传达的思想绝对有深度~！关于生活，关于理想，关于改变....</p>
+
+
+<p>Frank: My old man worked at Knox. He was a salesman in Yonkers. Once a year he used to take me into the city for lunch. It was supposed to be a special, life-advice sort of occasion. Not really... I used to sit there and think, I hope to Christ I don't end up like you.' And here I am, a thirty year old Knox man. Can you beat that?</p>
+
+
+<p>弗兰克：我老爸为Knox做过事情。他是扬克斯的一个销售人员。每一年他把我带到城里去吃一次饭。是那种很特别的，他给我一点生活建议的场合。结果却不是。我就坐在那儿心想：“我发誓我可不要跟你一个下场。”现在看看我，而立之年耶不过就是一个Knox的员工。多讽刺。</p>
+
+
+<p>APRIL: I think it's unrealistic for a man with a fine mind to go on working like a dog year after year at a job he can't stand, coming home to a place he can't stand, to a wife who's equally unable to stand the same things. You want to know the worst part? Our whole existence here is based on this great premise that we're somehow very special and superior to the whole thing, and you know what I've realized...? We're not! We're just like everyone else. Look at us! We've bought into the same ridiculous delusion. This idea that you have to resign from life and settle down the moment you have children. And we've been punishing each other for it.</p>
+
+
+<p>爱普莉：在我看来，现在的生活才叫不现实。让一个有着聪明才智的男人成年累月做牛做马地从事着难以容忍的工作，回家就要面对着难以容忍的环境，伴着个同样难以忍受所有这一切的妻子。你知道最可怕的是什么吗？我们这样的生活状态，完全是基于当初远大的期望，以为自己与众不同，出类拔萃。但是你知道我明白了些什么？我们压根不是那样的 。我们就和其他所有人一样。瞧瞧我们俩。我们就此陷入了同样荒谬的幻想。以为我们一有了小孩，就不得不放弃自己 的生活，安居乐业，举步不前。但为此我们却彼此惩罚着对方。 <br>APRIL: listen to me: It's what you are that's being stifled here. It's what you are that's being denied and denied and denied in this kind of life. Don't you know...? You're the most beautiful and wonderful thing in the world... You're a man.</p>
+
+
+<p>爱普莉：听我说：真正的你在这里被压抑了。真正的你被这样的生活一而再再而三地否定。你不知道么？你是这世上最美轮美奂、最奇妙无比的造物……你是个男人。</p>
+
+
+<p>FRANK: Jesus, their faces! You know what this is like, April? Talking like this? The whole idea of taking off to Europe this way? It's like the way I felt going up to the line the first time, in the war. I was probably just as scared as everyone else, but inside I never felt better. I felt alive. I felt full of blood. And everything looked more real. The guys in their uniforms. The snow on the fields, the trees. And all of us just... walking. I mean I was scared of course. But I kept thinking: this is it. This is the truth.</p>
+
+
+<p>弗兰克：老天，瞧他们的表情！知道这像什么吗，爱普莉？像这样子说话？像这样远赴欧洲？就像打仗的时候，我第一次上前线。我大概和别人一样心里发憷，不过心底我却感觉很好。我觉得生机勃勃，热血沸腾。所有的一切都那么真实。穿着制服的小伙子。田野上的皑皑白雪，那些树。我们就只是……大踏步前进。我是说我当然怕得要死了。可是我却一直在想：就该是这样。生活就该是这样</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-gan/'>观感</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40026863552/">
+		
+			站在上帝的角度看自己- 《女孩梦30》影评</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>很久很久之前我热衷于写影评和读后感，自从我“长大”之后就不这么做了。因为我意识到，在搞这些东西的时候，别人在争分夺秒地往前冲，你不迎头赶上，就落后了。这就是我的悲哀：总是假象一些东西，让自己很累，实际上是为自己的不完美找借口。</span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p> &nbsp;在《女孩梦三十》中，女主角Jona在自己13岁生日时许愿变成30岁人见人爱的漂亮女人，结果梦想成真。沉醉在喜悦中的Jona却逐渐发现，30岁的自己虽然实现了一切小时候的梦想，却变得自私，阴险，没有一个知心朋友，拒绝与家人联系。当她下决心要改变时，却无力回天，一切都晚了，自己被朋友出卖，公司面临破产，最惨的是，鼓起勇气向暗恋了自己多年的好朋友（就是男主角）表白，却被告知朋友明天就结婚了，而且不会因为她的告白而改变主意。男主角说：It’s not gonna work. We have been in different road for many years ,now i am move on ,you should move on .It’s a choice , I choose mine, and it’s not you. 常言说，失去才知道珍惜。当已经习惯一个人对你好对你无条件服从的时候，他却对你说，i don’t care any more， 这是最打击的。</p>
+
+
+<p>如果时光能够倒流， 你会后悔么？ 你会选择另外一条路么？</p>
+
+
+<p>对于这个问题，Jona的母亲这样回答： 我不会后悔，也不会选择重来一遍。因为做错了才会明白如何才是对的。</p>
+
+
+<p>年轻的时候我们多少会做错事情，伤害至亲的人，但是如果今天学会珍惜，不再任性，生活还是可以很美好的。</p>
+
+
+<p>另外，影片结尾两个人在房子里放照片很温馨，以后要多多搜集下这类的照片。手表上滴滴答答的不仅仅是时间，而是生活。</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-gan/'>观感</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40026051505/">
+		
+			时间恐惧症</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>最近，总是对匆匆流逝的时间充满恐慌。虽然我是公司最年轻的一个，却总也放松不下来，我总是在想：“马上就24了啊，还一事无成，我可怎么办呀。。”每当我发自内心地向同事倾诉，得到的却是他们的奚落。他们总是认为年轻人有一大把的时间可以挥霍，我却从不这么认为。 </span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p> &nbsp;&nbsp;&nbsp;时间对所有人都是公平的，不管是年老或是年轻，每一分钟都要充实，都要收获点什么。但是在工作之后，好像一天一天过得飞快，工作上没有什么实质上的进展，社会经验也没有增长很多。我越来越感到工作是在消耗人的激情和灵感。如果辛辛苦苦读完大学为的是在社会上把大学时代的激情和理想一点点磨灭，那么当初选择离乡背井又是为了什么呢？！</p>
+
+
+<p> &nbsp;&nbsp;我给自己做了诊断，叫“时间恐惧症”。</p>
+
+
+<p> &nbsp;&nbsp;也许是看到周围社招过来的牛人太强，心理有些小小的自卑，想快点成长起来的缘故吧，每天晚上回顾一天的收获，如果是浑浑噩噩的，就会很自责；</p>
+
+
+<p> &nbsp;&nbsp;也可能是现实生活中的“工作”跟我想象中不一样导致梦想的破碎吧。在学校的时候，我总想工作应该是忙也忙不完的，每天有应付不完的事情，可是现在，工作很清闲，没了挑战，有点小小的失望。</p>
+
+
+<p> &nbsp;&nbsp;今天到了公司，发现很多人窝在电脑前看电影。他们都是所谓的“社会人”，据说是对生活早已看透，对工作没有任何激情，梦想也丢到脑后的一群人。我不想变成他们那样，却明显感到自己对未来的热情逐渐转淡。我打开新浪博客里的停车位游戏，发现自己又被贴罚单了，把车挪了挪位置，计时器清空，从新来。一分钟，两分钟，。。。我看着收入那栏的钱一块，两块往上涨，突然有种感慨：这哪里是玩游戏，这是在买卖我的时间啊。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;游戏的原理大同小异，都是把玩家的时间搭到虚拟世界里，算是中逃避吧。。。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;也许我会因此不再玩任何游戏，因为一个原则：“这段时间内我收获了什么？Nothing！”。时间与我，既是朋友又是敌人，只有好好对待，才能长治久安，得到永远的安宁。</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/liu-guang/'>流光</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40025268444/">
+		
+			书摘-《摩天轮》</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>有一种人生，名字叫做“摩天轮”。 </span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p>你始终站在观光舱里透过玻璃看风景，即使转到最高点，即使无限接近，风景也不属于你。当转完一整圈之后，依然孤孤单单地离开摩天轮。 <br>我正在进行着的人生，就困在摩天轮的某一圈里： <br>每天乘坐拥挤的公交车到达市中心的写字楼，就连电梯间都有中英文流利的礼宾小姐；每天整理巴黎米兰纽约伦敦的时装趋势，谈论秀场上摔倒的模特，然后跟同事一起打印电子优惠券去换购午餐；但或许白天还在约名人聊天拍照，晚上就回到租来的小房间里吃泡面写稿。 <br>摩天轮很高，观光舱外的风景很美。 <br>我站在玻璃后，只负责将最美的景象拍照留念。 <br>看过那么多转瞬即逝的美丽泡沫，我知道再长的旅程也有结束的一天；在高处转动时遇见的一切，都不可能在结束后随我一起落回地面。 <br>那是一段触不到的风景，始终隐没在抬头就能看到的云端里。 <br>每个人心中都有一座巴黎，乘坐摩天轮的我们可以无限接近，却也必须逐渐远离。或许我们永远无法真正抵达，却也永远不会停止仰望。</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/guan-gan/'>观感</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40026097951/">
+		
+			土人逛上海</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>哈，今天当了一把农民工，闯到上海的金融中心陆家嘴逛了一圈。不仅很老土地坐了观光车，拍了一分钟快照，还花了银子去了东方明珠的顶层。回来之后被公司一个满族镶蓝旗的同事笑了半天，直接叫我土包子。。哎，土就土吧~~不管别人怎么说，怎么想。大上海，我来啦~！！</span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p>在东方明珠门口遇到一个大姐，看样子像个知识分子，穿的不知道什么毛的黑色大衣，戴一眼镜儿，挺斯文的。跟她很聊的来，我问她是否在上海工作，她说是，然后支支吾吾的说今天单位没事，就出来逛逛。一路上我们都在笑，聊张江男，聊创业，聊IT。后来上了明珠顶上我们就走散了。我跟着一旅游团逛，反正有一东北大妞免费做导游，倒是学到不少老上海的历史。等快下去的时候，我突然瞟见遇到的那个大姐，坐落地窗前的台阶上，背后是著名的金茂大厦和环球金融中心，她在看报纸。我坐过去，发现她在看工作招聘版，上面还有笔画的圈圈，。。。。顿时我明白了，她失业了。当时是下午四点，阳光斜斜地照下来，穿过496米的高楼，印在大姐的脸上，一切都是平静的。我冲她笑笑，然后静悄悄地离开了。</p>
+
+
+<p>也许她之前是个律师，或是报关员？金融危机在不知不觉中入侵了我们的生活。昨天还有同事在感慨，怎么没感觉到金融危机呢。我想，只是我们比其他人幸运罢了。我们还有一份足够养活自己的工作，还能买的起超市里的泡面，还不用自己负担家人的开销。。。珍惜所拥有的一切~！就如禅学里的思想，珍惜生命就是活在当下。</p>
+
+
+<p>今天还看到了数目惊人的民工。因为要对金茂旁边的一栋大厦进行爆破，他们被强制疏散出施工区域。我当时坐在观光车上，正在看黄浦江上的渡轮，扭头就看到路边一色的黄帽子，对，就是那种安全施工帽。蔚为壮观。一群人衣着破烂，鼻子冻得红红的，或蹲或站地在繁华的马路旁，跟他们背后高入云霄的大楼极不相衬。喏，这又是一个对比。以对比形式出现的东西，总是能给人带来某种沉思。</p>
+
+
+<p>下午从陆家嘴回来，找到了离公司最近的图书馆。进去看了下，肠子都悔青了。后悔的是，当年在学校有那么大的一个图书馆没有好好珍惜，借书证丢在那里都长霉菌了。。现在区区一个少年宫旁边的小图书楼，办卡还收80块钱，里面书少得可怜。。。想起罗伯特清崎说过，给大脑投资是唯一只赚不赔的生意，就潇洒地办了张卡，拿到卡之后想的第一件是就是，以后能有多少机会来呢？哎~怀念在学校一天睡10个小时，吃香喝辣的日子。。。</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/liu-guang/'>流光</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40025078567/">
+		
+			一梦三四年</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>记得当时年纪小 </span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p>你爱谈天 <br>我爱笑 <br>有一回并肩坐在桃树下 <br>风在林梢鸟儿在叫 <br>我们不知怎样睡着了 <br>梦里花落知多少</p>
+
+
+<p>上一次看这种煽情的诗歌已经是四年前了。那时厮杀在让人胃疼的数理化试卷中，还好有优美的文字陪我躲在小小的角落，让我在压力面前有机会喘息。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有朋友结婚了，大家争相祝贺。我也在觥筹交错间祝福新人白头偕老。红酒一饮而下，看着眼前晃动的身影，我的思绪还停留在初中的校园，我们沐浴着秋日的阳光，并肩趴在二楼的铁栏杆上冲路过的数学老师吐口水。“都过去了”我对自己说，一如刚听到玉置浩二《恋爱预感》时的感慨。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是什么时候我们开始长大的呢？“成熟”这个词让我措手不及。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;刚入大学的兴奋变成找工作的惆怅。整理东西的时候，偶而看到一大堆高中同学的来信，才想起自从大三以后，就没怎么联系了。四年时间，长得足以忘掉一个人的面容。我拼命想抓住童年的时光，可是终究还是在念念不忘中遗忘了，拿起毕业照，痛苦地发现很多人，我已经叫不出名字。我舍不得遗忘！可是时间冷冰冰地流过，带走了童年的记忆，留下了未知的将来。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我时常在想，是不是大家跟我一样，都在经历蜕变的痛苦。也时常在想，“是什么定义了我们的过去？”是厚厚的相册么？是保存的寒暑假往返车票么？抑或仅仅是别人脑海中的一抹痕迹？。。。谁是谁的风景，谁成就了谁的舞台，谁的无心成全了谁的有意？。。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;也许应该在心底给自己留下一小块空地，在心底最柔软的地方，存放最原始的情感。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一梦三四年，梦醒了，一切都变了。有人工作了，有人留校了，有人考研了，有人出国了。就像一个分叉口，不管之前的旅程开心与否，今后的路都要继续走下去。瞧，这就是长大的无奈----明明不喜欢，还要头破血流地去争取。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;疲惫的时候喜欢听 Aerosmith的《dream on》 和 bon Jovi 的《It's &nbsp;my life》 ，能找到一丝过去的感觉：年轻气盛，无所畏惧。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反复告诫自己，过去很美好，可是生活仍要继续。“生活在别处”是人们的通病，既然明白了曾经有过美好，那么就不要沉湎在过去的辉煌里，活在当下, fight,fight for more!</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+May 28th, 2012</div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/liu-guang/'>流光</a>
+
+
+</div>
+	
+</div>
+</article>
+
+<nav id="pagenavi">
+    
+        
+            <a href="/posts/5" class="prev">Prev</a>
+        
+    
+    
+        <a href="/posts/7" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    yokowinds
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
