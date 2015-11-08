@@ -1,23 +1,24 @@
 ---
 layout: post
-title: "hello world"
+title: “Me and Mrs.Jones”
 date: 2015-11-03 22:51:57 +0800
 comments: true
 categories:
 ---
 
-## Me and Mrs.Jones
-Me and Mrs. Jones,
-we got a thing going on,
-We both know that it's wrong
-But it's much too strong to let it cool down now.
-We meet ev'ry day at the same cafe,
-Six-thirty I know she'll be there,
-Holding hands, making all kinds of plans
-While the jukebox plays our favorite song.
-Me and Mrs., Mrs. Jones, Mrs. Jones, Mrs. Jones,
-Mrs. Jones got a thing going on,
-We both know that it's wrong,
+Me and Mrs. Jones,  
+we got a thing going on,  
+We both know that it's wrong  
+But it's much too strong to let it cool down now.  
+We meet ev'ry day at the same cafe,  
+Six-thirty I know she'll be there,  
+Holding hands, making all kinds of plans  
+  
+
+While the jukebox plays our favorite song.  
+Me and Mrs., Mrs. Jones, Mrs. Jones, Mrs. Jones,  
+Mrs. Jones got a thing going on,  
+We both know that it's wrong,  
 But it's much too strong to let it cool down now.
 We gotta be extra careful that we don't build our hopes too high
 Cause she's got her own obligations and so do I,
