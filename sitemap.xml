@@ -393,19 +393,25 @@
     <lastmod>2008-12-31T17:10:00+08:00</lastmod>
   </url>
   <url>
+    <loc>http://yokowinds.github.io/blog/</loc>
+  </url>
+  <url>
     <loc>http://yokowinds.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://yokowinds.github.io/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/super-awesome/</loc>
+    <loc>http://yokowinds.github.io/archives/</loc>
+  </url>
+  <url>
+    <loc>http://yokowinds.github.io/about/</loc>
   </url>
   <url>
     <loc>http://yokowinds.github.io/blog/categories/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/about/</loc>
+    <loc>http://yokowinds.github.io/super-awesome/</loc>
   </url>
   <url>
     <loc>http://yokowinds.github.io/blog/categories/nian-lun/</loc>
