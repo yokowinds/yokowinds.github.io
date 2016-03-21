@@ -5,10 +5,6 @@
     <lastmod>2016-03-20T16:21:03+08:00</lastmod>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/2015/11/08/angry-elephent/</loc>
-    <lastmod>2015-11-08T10:39:30+08:00</lastmod>
-  </url>
-  <url>
     <loc>http://yokowinds.github.io/blog/2015/11/07/about-time/</loc>
     <lastmod>2015-11-07T16:19:45+08:00</lastmod>
   </url>
@@ -18,10 +14,6 @@
   </url>
   <url>
     <loc>http://yokowinds.github.io/blog/2015/11/03/%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2015-11-03T22:51:57+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/2015/11/03/hello-world/</loc>
     <lastmod>2015-11-03T22:51:57+08:00</lastmod>
   </url>
   <url>
@@ -393,46 +385,40 @@
     <lastmod>2008-12-31T17:10:00+08:00</lastmod>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/</loc>
+    <loc>http://yokowinds.github.io/archives/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/archives/</loc>
+    <loc>http://yokowinds.github.io/blog/</loc>
   </url>
   <url>
     <loc>http://yokowinds.github.io/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/archives/</loc>
+    <loc>http://yokowinds.github.io/blog/archives/</loc>
   </url>
   <url>
     <loc>http://yokowinds.github.io/about/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/categories/</loc>
+    <loc>http://yokowinds.github.io/categories/nian-lun/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/super-awesome/</loc>
+    <loc>http://yokowinds.github.io/categories/you-ji/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/categories/nian-lun/</loc>
+    <loc>http://yokowinds.github.io/categories/zhi-chang/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/categories/you-ji/</loc>
+    <loc>http://yokowinds.github.io/categories/guan-gan/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/categories/zhi-chang/</loc>
+    <loc>http://yokowinds.github.io/categories/shan-yi/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/categories/guan-gan/</loc>
+    <loc>http://yokowinds.github.io/categories/liu-guang/</loc>
   </url>
   <url>
-    <loc>http://yokowinds.github.io/blog/categories/shan-yi/</loc>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/liu-guang/</loc>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/guan-li/</loc>
+    <loc>http://yokowinds.github.io/categories/guan-li/</loc>
   </url>
   <url>
     <loc>http://yokowinds.github.io/posts/2/</loc>
@@ -460,37 +446,5 @@
   </url>
   <url>
     <loc>http://yokowinds.github.io/posts/10/</loc>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/guan-gan/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/guan-li/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/liu-guang/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/nian-lun/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/shan-yi/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/you-ji/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://yokowinds.github.io/blog/categories/zhi-chang/index.html</loc>
-    <lastmod>2016-03-20T20:44:47+08:00</lastmod>
   </url>
 </urlset>

@@ -2,14 +2,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<!-- script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script -->
+	<script src="//libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>睡前一公里  | yokowinds' blog</title>
+	<title>���������������  | yokowinds' blog</title>
 
 <meta name="author" content="yokowinds"> 
 
-<meta name="description" content="相信每个爱美的女人都希望自己有个无穷大的衣柜。我的衣柜已经快超负荷了，但仍然制止不了我买衣服的冲动。主要原因是根本不知道我衣服到底有多少，所以总是感觉缺一件。4月份换季的时候，我从柜顶上翻出所有夏天的衣服，发现很多竟然是买了就忘记穿。于是我突发奇想，我要建立个人衣服管理平台， &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="最近重温了大学时代的电影清单，看了《小姐好辣》，其中那段曾让我感动其中无法自拔的台词，现在看来，已经找不到当初的feel了： “he is the only one who make my heart beats slower and faster at the same time” &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -18,8 +19,6 @@
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
 
 <script language="Javascript" type="text/javascript">
@@ -63,10 +62,12 @@ $(document).ready(
 
 <body>
 	<header id="header" class="inner"><h1><a href="/">yokowinds' blog</a></h1>
-<h4>睡前一公里</h4>
+<h4>���������������</h4>
 <nav id="main-nav"><ul>
 	<li><a href="/">Blog</a></li>
 	<li><a href="/about">About</a></li>
+	<li><a href="/portfolio">Portfolio</a></li>
+	<li><a href="/archives">Archive</a></li>
 </ul>
 </nav>
 <nav id="mobile-nav">
@@ -75,6 +76,8 @@ $(document).ready(
 		<div class="container"><ul>
 	<li><a href="/">Blog</a></li>
 	<li><a href="/about">About</a></li>
+	<li><a href="/portfolio">Portfolio</a></li>
+	<li><a href="/archives">Archive</a></li>
 </ul>
 </div>
 	</div>
@@ -93,174 +96,6 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/06/03/40027898420/">
-		
-			“我的衣柜”程序修订日志</a>
-	</h2>
-	<div class="entry-content">
-		<p>相信每个爱美的女人都希望自己有个无穷大的衣柜。我的衣柜已经快超负荷了，但仍然制止不了我买衣服的冲动。主要原因是根本不知道我衣服到底有多少，所以总是感觉缺一件。4月份换季的时候，我从柜顶上翻出所有夏天的衣服，发现很多竟然是买了就忘记穿。于是我突发奇想，我要建立个人衣服管理平台，不仅录入我所有的衣服信息，还需要给每件衣服打上tag，帮助日常搭配。酝酿了一周，我就动手做了。</p>
-
-
-<p>最近正好换了mac air，于是编码环境就从ubuntu迁移到mac os 。 选用的是 python＋django＋mysql 。 搭建环境过程中各种诡异问题，折腾两个星期后，我的closet就开始正式“系分”了。</p>
-
-
-<p>在django中写好模型对象，框架就会自动帮你建立好数据库存储。</p>
-
-
-<p>clothes对象有如下属性： 颜色 &nbsp;穿衣季节 &nbsp;材质 &nbsp;类别 &nbsp;新旧 &nbsp;标签 &nbsp;照片 &nbsp;最后修改时间 </p>
-
-
-<p><img id="248C35E3A10D8C2C4FE0FA56A0470678"></p>
-
-
-<p>这周只是把数据库和后台管理整起来了，基本增／删／改／查已满足。前台页面目前只是照片的堆砌，后面几周继续完善。feature to go：</p>
-
-
-<p>1. 瀑布式浏览。 开打默认式当下这个季节的所有衣服图片展示。经常看看，防止有些衣服丢衣柜里忘记穿。</p>
-
-
-<p>2. 按照季节／tag／颜色等分类浏览</p>
-
-
-<p>3. 自动搭配功能。按照一定的规则，比如浅色上衣＋深色下衣等，系统随机搭配出今天要穿的衣服。</p>
-
-
-<p>4. 根据对衣服的喜欢程度，可以设置衣服在随机搭配中出现的频率。初步想法是给不同衣服不同的权重值。</p>
-
-
-<p>5. 手机拍照自动上传图片到服务器功能｛这个纯属yy，有时间就完善下｝</p>
-
-
-<p>&nbsp;</p>
-
-
-<p>－－－－未完</p>
-
-
-<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待续－－－－</p>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-03T16:23:00+08:00" pubdate data-updated="true"></time></div>
-	
-	
-</div></article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/05/29/40027873856/">
-		
-			项目总结-移花接木三期</a>
-	</h2>
-	<div class="entry-content">
-		<p>这个项目是我从其他PM手里接过来的，对于前期的信息沟通不是很清晰。到我手里的时候，资源、范围都确定了，我就掉以轻心地按照升级包形式来做。</p>
-
-
-<p>虽然发布之前制定了详细的计划、做了两轮的代码review，发布期间仍然出现了问题：充退查询原充值数据使用大字段兼容方案和分期支付渠道切换到渠道路由兼容方案 。</p>
-
-
-<p> 从项目角度反思了下，有几点是没有做好的： </p>
-
-
-<p> 1. &nbsp;&nbsp;&nbsp;项目周期太长。从2月底做到5月初。其实工作量没有那么大，而是由于期间被插入过两个高优先级的业务型的升级包，开发和测试两个人都没有fulltime的投入项目，导致发布期间问题较多。以后制定项目计划时一定要避免这种拖沓的情况，让团队成员的注意力保持在一个项目中。</p>
-
-
-<p> 2. &nbsp;&nbsp;&nbsp;没有遵循变更的处理流程，改动比较随意。 项目期间发现的变更有： a. 在功能测试阶段加入分期的逻辑规则 &nbsp;&nbsp;b. 在代码合并前一周加入无卡支付的搭车逻辑 &nbsp;&nbsp;&nbsp;。 这两个功能都只是系分、测分两个人沟通通过，其他人都是事后被告之，没有经过团队的充分评估。果然这两个后来加上的点在预发布、发布阶段都出现了问题。 &nbsp;以后面对既已发生的变更，在得知之后，还是要遵循变更流程，各方彻底评估后方能接受。</p>
-
-
-<p> 3. &nbsp;&nbsp;&nbsp;对项目复杂度评估不够，各方资源没准备到位。从系分上看，这只是一个接口的迁移。没想到发展到后来，分期上线、浦发信用卡上线、收银台发布的不兼容等等问题出现，回头看看，资源上是有问题的：系分没有大型项目的经验、测分本身身兼产品Owner的角色，日常事情非常多、收银台的开发是个新人，对系统了解不够…. 当然这是马后炮，以后千万不能小看任何一个项目，每个项目都有独立性，都有不一样的风险，要保持警觉，谨慎对待。</p>
-
-
-<p> 4. &nbsp;老问题，没管理好干系人。比如系分评审会议，没有喊上架构师和测试主管、 发布计划评审没有喊上SQA，让各种流程沦为形式，没有发挥好每个人的作用。还有一个，项目上线时间变更没有通知到北面（虽然不是需求方，但比较关心这个需求），导致与无线的配合比较仓促。</p>
-
-
-<p>&nbsp;</p>
-
-
-<p>测分的个人总结：</p>
-
-
-<p>新老数据兼容性测试，这是今后必须要考虑到也是要做到的点，相同问题决不能再次出现；</p>
-
-
-<p><span><span>需要其他同学配合测试时，需要说明改动点以及测试点和范围，有必要的情况下还可以让配合同学也评估一下是否还有遗漏的点，毕竟人多力量大，想到的也更全面；</span></span></p>
-
-
-<p>项目进行中新增的需求必须充分评估，较为保险的方法就是邀请相关业务负责人一起参与评估及分析，人与人之间重在沟通；</p>
-
-
-<p>对于项目中任何代码的修改及删除的掌控度需要提高，只有自己知道了这里的改动，才能更好的评估出测试的范围；</p>
-
-
-<p>对于老数据的特殊性需要追寻，测试过程中，建议增加捞取线上数据的比对环节，这样可以比较好的防止对于某些特殊数据的评估不足的问题。</p>
-
-
-<p>以上几个问题都是测分需要做到的，但也都是比较花费时间和精力的事情，所以我发现公司制定的金字塔结构的组织架构真的很科学，很符合项目的要求。</p>
-
-
-<p>为什么要将测分和测试执行者单独分开来？</p>
-
-
-<p></p>
-
-
-<p> &nbsp;&nbsp;就是为了让测分同学能有更多的时间和精力去完成上面总结中的工作，只用测分做好了，测试执行也就全面了。</p>
-
-
-<p>这个项目中做到了测分和测试执行的拆分马？</p>
-
-
-<p><span><span>没有，整个项目中测分和测试执行同学基本上是同一个，其他外围配合同学虽然找了一大推，有快捷网关的梦洁同学、信用卡分期的李寄同学、无卡支付的记儿同学、无线支付的羽东同学、直连冲退的淳于柔同学，等等，但是大家也仅仅是做了下回归工作，回归同学对于项目中的改动是什么根本不明确，这也就是总结中第二点需要改善的。说实话，本项目中测分很缺少时间来完成总结中的第三、四、五点的内容。我的错误在与向主管沟通，让其再协调一个专门进行测试执行的资源给我，替我分担这部分工作，这也是我今后在做此类大型技改类项目时要注意的地方，我太闷了，自己不是万能的。</span></span></p>
-
-
-<p><br><p></p></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-29T16:53:24+08:00" pubdate data-updated="true"></time></div>
-	
-	
-</div></article>
 
 
     <article class="post">
@@ -333,6 +168,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:19:30+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//liu-guang/'>流光</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -404,6 +247,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:19:00+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//guan-li/'>管理</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -478,6 +329,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:18:11+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//guan-gan/'>观感</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -555,6 +414,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:17:46+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//guan-gan/'>观感</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -623,6 +490,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:17:12+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//guan-gan/'>观感</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -697,6 +572,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:14:46+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//liu-guang/'>流光</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -753,6 +636,14 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:14:26+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//guan-gan/'>观感</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -818,6 +709,226 @@ $(document).ready(
 
 <time datetime="2012-05-28T23:14:01+08:00" pubdate data-updated="true"></time></div>
 	
+
+<div class="tags">
+
+	<a class='category' href='//liu-guang/'>流光</a>
+
+</div>
+
+
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40025078567/">
+		
+			一梦三四年</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span>记得当时年纪小 </span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p>你爱谈天 <br>我爱笑 <br>有一回并肩坐在桃树下 <br>风在林梢鸟儿在叫 <br>我们不知怎样睡着了 <br>梦里花落知多少</p>
+
+
+<p>上一次看这种煽情的诗歌已经是四年前了。那时厮杀在让人胃疼的数理化试卷中，还好有优美的文字陪我躲在小小的角落，让我在压力面前有机会喘息。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有朋友结婚了，大家争相祝贺。我也在觥筹交错间祝福新人白头偕老。红酒一饮而下，看着眼前晃动的身影，我的思绪还停留在初中的校园，我们沐浴着秋日的阳光，并肩趴在二楼的铁栏杆上冲路过的数学老师吐口水。“都过去了”我对自己说，一如刚听到玉置浩二《恋爱预感》时的感慨。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是什么时候我们开始长大的呢？“成熟”这个词让我措手不及。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;刚入大学的兴奋变成找工作的惆怅。整理东西的时候，偶而看到一大堆高中同学的来信，才想起自从大三以后，就没怎么联系了。四年时间，长得足以忘掉一个人的面容。我拼命想抓住童年的时光，可是终究还是在念念不忘中遗忘了，拿起毕业照，痛苦地发现很多人，我已经叫不出名字。我舍不得遗忘！可是时间冷冰冰地流过，带走了童年的记忆，留下了未知的将来。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我时常在想，是不是大家跟我一样，都在经历蜕变的痛苦。也时常在想，“是什么定义了我们的过去？”是厚厚的相册么？是保存的寒暑假往返车票么？抑或仅仅是别人脑海中的一抹痕迹？。。。谁是谁的风景，谁成就了谁的舞台，谁的无心成全了谁的有意？。。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;也许应该在心底给自己留下一小块空地，在心底最柔软的地方，存放最原始的情感。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一梦三四年，梦醒了，一切都变了。有人工作了，有人留校了，有人考研了，有人出国了。就像一个分叉口，不管之前的旅程开心与否，今后的路都要继续走下去。瞧，这就是长大的无奈----明明不喜欢，还要头破血流地去争取。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;疲惫的时候喜欢听 Aerosmith的《dream on》 和 bon Jovi 的《It's &nbsp;my life》 ，能找到一丝过去的感觉：年轻气盛，无所畏惧。</p>
+
+
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反复告诫自己，过去很美好，可是生活仍要继续。“生活在别处”是人们的通病，既然明白了曾经有过美好，那么就不要沉湎在过去的辉煌里，活在当下, fight,fight for more!</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T23:11:34+08:00" pubdate data-updated="true"></time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='//liu-guang/'>流光</a>
+
+</div>
+
+
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/28/40025834425/">
+		
+			技术人员的有效沟通</a>
+	</h2>
+	<div class="entry-content">
+		<p></p>
+
+
+<p><span><strong>首先定义沟通，也是大前提：</strong></span><br></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<ul><li><p>沟通VS有效沟通</p></li><li><p>沟通VS辩论</p></li><li><p>沟通VS角色（换位思考）</p></li></ul>
+
+
+<p><strong>一次成功的沟通至少要达到以下目的：信息交换，解决问题，情感宣泄</strong></p>
+
+
+<p><strong>沟通的技巧：体现关心</strong></p>
+
+
+<ul><li><p>关注需求与不便</p></li><li><p>关注痛苦与问题</p></li></ul>
+
+
+<p>聆听VS积极聆听：</p>
+
+
+<p>归纳总结，平视对方，提出问题</p>
+
+
+<p>这里反思了一下自己，可以做到第二第三，但第一点做的不够。重复，重复，再重复是让问题明朗化的手段。也能让自己的成果给别人的印象更深刻。 比如，在开会之后，可以说“我重复下刚才讨论的结果”</p>
+
+
+<p>反馈： 明确，平衡，积极，建设性，正确的时间。</p>
+
+
+<p><strong>与上级沟通：</strong></p>
+
+
+<ul><li><p>对提建议和解决方案，少抛问题</p></li><li><p>多给选择题，少做开放性问题</p></li><li><p>给老板的答案永远是至少一个。</p></li><li><p>不但提多于一个的解决方案，还给出各个方案的优点缺点。</p></li></ul>
+
+
+<p><strong>与下级沟通：</strong></p>
+
+
+<ul><li><p>提供方法，紧盯过程</p></li><li><p>不要只会责问，有时候花时间让下属好好体会</p></li><li><p>多了解执行情况，但自己一定要熟悉。</p></li></ul>
+
+
+<p><strong>平级间沟通：</strong></p>
+
+
+<p>谦让，体谅，协作，双赢</p>
+
+
+<p>自我感觉自己在协作和体谅还做的不够。有时候为了争一时口舌之快，导致气氛不友好，或者谈判破裂，伤了感情，也表现自己没什么城府的样子。心中有火，倒数三秒再发出来，不要针对个人发火。其实，整个公司有权发火或者蔑视别人的只有老板一个人。平级的同事都是出来混口饭吃，大家应该是合作的关系，目的是把事情做成，而不是处处挤压别人。</p>
+
+
+<p>另外我发现，<strong>自大和清高的人总是第一眼看到别人的缺点，看不到优点</strong>。这是很不利于团队合作的</p>
+
+
+<p>------------------静悄悄的分割线--------------</p>
+
+
+<p>最近参加了很多培训，也组织过培训，更自己做过培训，发现自己对培训还是很感兴趣的。</p>
+
+
+<p>本次积累的经验：<strong> 在培训结束的时候要回顾要点！</strong>不然思维太发散回不到主题，感到没什么收获的样子。并提醒观众，要总结，要DO，才会真正掌握。</p>
+
+
+<p>今天的周会上，自己就做了一件很不懂事的事儿。主管不在，PM充当主持人的角色，但是逢事毕问，而且是高高在上的态度去问，让我很不爽。于是，<strong>很脑残的一幕出现了：</strong>当我做完自己的工作汇报之后，PM问我，那你的XXOO有没有什么难点呢？进展如何呢？ 我当时心想，跟你说了你又解决不了，况且又轮不到你来解决，就狠狠地对他说，不是每个人限时两分钟么，超时了。再说了，跟你说你能保证给我解决么？如果你感兴趣，下午可以过来听我和PA的讨论。 于是。。。冷场了。哎，脑残啊脑残。<strong>当时大boss在场，估计是很不高兴。他说“仅仅是限于时间的会议是无效的”，这不是责怪我么。。。！！</strong> 脑残啊脑残。后来想想，自己当时是情绪不对头，才会没头没尾的来这么一句的。以后记住，工作就是工作，工作也只是工作，不要将个人喜好带入工作！</p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+<p></p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T23:10:30+08:00" pubdate data-updated="true"></time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='//guan-li/'>管理</a>
+
+</div>
+
+
 	
 </div></article>
 
@@ -838,14 +949,6 @@ $(document).ready(
 Powered by Octopress.
 </footer>
 	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
-
 
 
 
